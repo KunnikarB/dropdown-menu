@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&family=Satisfy&display=swap');
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "Fjalla One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  margin-top: 60px;
+}
+
+h1 {
+  color: #ff1493;
+  text-align:center;
+  font-family: satisfy;
+  font-weight: 300;
+}
+
+ul {
+  text-align: center;
+  text-decoration: none;
+  li {
+    display:inline-block;
+    margin-right: 15px;
+    transition:all 0.3s ease-in-out;
+
+    &:hover {
+      .submenu {
+        height: 85px;
+      }
+
+      a {        
+        color: purple;
+        &::before {
+          visibility: visible;
+          transform: scale(1, 1);
+        }
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+    .submenu {
+      width: 100%;
+      left: 0;
+      overflow:hidden;
+      position:absolute;
+      background-color: #e31d7c;
+      height: 0;
+      line-height: 40px;
+      transition:height 0.3s ease-in-out;
+      transition-delay: 0.1s;
+
+      a {
+        color: #fff;
+        margin-top: 20px;
+        font-size: 16px;
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+        }
+      }
+    }
+    
+    a {
+      color: #fa98d1;
+      display: block;
+      padding: 0 7px 0 7px;
+      margin: 0 0 10px;
+      text-decoration: none;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        transition: all 0.2s ease-in-out;
+        transform: scale(0, 0);
+        visibility: hidden;
+      }
+    }
+  }
+}
